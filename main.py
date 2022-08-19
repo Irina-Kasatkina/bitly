@@ -32,7 +32,11 @@ def create_parser():
                         'Показывает число кликов по bitly ссылке, '
                         'если вход дана bitly ссылка.'
     )
-    parser.add_argument('link', nargs='?', help='Url для укорачивания или bitly ссылка')
+    parser.add_argument(
+        'link',
+        nargs='?',
+        help='Ссылка для укорачивания или bitly ссылка для подсчёта кликов'
+    )
     return parser
 
 
