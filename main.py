@@ -85,8 +85,7 @@ def main():
     token = os.environ['BITLY_TOKEN']
 
     try:
-        bitlink_is_received = is_bitlink(token, received_link)
-        if bitlink_is_received:
+        if is_bitlink(token, received_link):
             clicks_count = count_clicks(token, received_link)
             print(f'Количество перехоодов по ссылке bitly: {clicks_count}')
         else:
